@@ -1,0 +1,42 @@
+https://www.uio.no/studier/emner/matnat/ifi/INF3380/v10/undervisningsmateriale/inf3380-week12.pdf
+
+
+https://www.youtube.com/watch?v=ptrN0hkYpF4
+
+
+// for loop with condition in it 
+https://stackoverflow.com/questions/21930038/how-to-run-a-parallel-for-loop-for-a-condition
+
+
+
+//thread start and join 
+https://docs.microsoft.com/en-us/dotnet/api/system.threading.thread?view=netframework-4.7.2#Starting
+
+//convert object to int 
+https://answers.unity.com/questions/749816/how-to-convert-object-into-int.html
+
+//threading 
+https://blackboard.qut.edu.au/bbcswebdav/pid-7470135-dt-content-rid-17652945_1/courses/CAB401_18se2/win32.cpp
+
+
+// thread join
+https://www.dotnetperls.com/threadstart
+
+
+
+//on set detection first for loop 
+ // Createing an array of thread with the size of number of Processor
+            Thread[] threads = new Thread[System.Environment.ProcessorCount];
+
+            for (int thread = 0; thread < System.Environment.ProcessorCount; thread++) {
+
+                //creating new thread that calls a parameterized method doworkonsetforloop.
+                threads[thread] = new Thread(DoWorkOnSetForLoop);
+                threads[thread].Start(thread);
+            }
+            // Join all the threads.
+            for (int thread = 0; thread < System.Environment.ProcessorCount; thread++)
+            {
+                threads[thread].Join();
+                //System.Console.Out.Write("thread  joined {0}\n", thread);
+            }
